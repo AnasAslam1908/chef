@@ -5,10 +5,7 @@ import { getRecipeFromMistral } from "./ai";
 
 export default function Main() {
     const [ingredients, setIngredients] = useState([
-      "all the main spices",
-      "pasta",
-      "ground beef",
-      "tomato paste",
+      
     ]);
     const [recipe, setRecipe] = useState("");
     const recipeSection = useRef(null);

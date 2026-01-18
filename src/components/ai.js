@@ -1,10 +1,8 @@
-// src/ai.js - UPDATED VERSION (frontend only)
 export async function getRecipeFromMistral(ingredientsArr) {
   try {
-    // Determine API URL based on environment
     const API_URL = import.meta.env.PROD
-      ? "/api/recipe" // Same origin in production
-      : "http://localhost:3000/api/recipe"; // Local dev
+      ? "/api/recipe" 
+      : "http://localhost:3000/api/recipe"; 
 
     const response = await fetch(API_URL, {
       method: "POST",

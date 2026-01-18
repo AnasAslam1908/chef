@@ -1,8 +1,7 @@
-// api/recipe.js - NEW FILE
 import { HfInference } from "@huggingface/inference";
 
 export default async function handler(req, res) {
-  // Handle CORS
+ 
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -28,7 +27,6 @@ export default async function handler(req, res) {
         .json({ error: "Please provide an array of ingredients" });
     }
 
-    // Your original AI logic goes here
     const hf = new HfInference(process.env.VITE_HUGGINGFACEHUB_API_TOKEN);
     const ingredientsString = ingredients.join(", ");
 
